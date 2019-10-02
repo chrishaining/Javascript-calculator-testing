@@ -10,26 +10,31 @@ describe('calculator functionality', function() {
   });
 
   // write integration tests here in the form of "it should do something..."
-  it('should have working number buttons', function(){
+  xit('should have working number buttons', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number2')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
-});
+  // Do the number buttons update the display of the running total?
+  xit('the number buttons should update the display of the running total', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number4')).click();
+    element(by.css('#number2')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('42')
+  })
 
-// Do the number buttons update the display of the running total?
-//   it('the number buttons should update the display of the running total', function(){
-//     running_total = element(by.css('#running_total'))
-//     element(by.css('#number2')).click();
-//     expect(running_total.getAttribute('value')).to.eventually.equal('2')
-// })
-
-// Do the arithmetical operations update the display with the result of the operation?
+  // Do the arithmetical operations update the display with the result of the operation?
   it('the arithmetical operations should update the display with the result of the operation', function(){
-      
+
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
+
+});
+
+
+
+
 
 
 // Can multiple operations be chained together?

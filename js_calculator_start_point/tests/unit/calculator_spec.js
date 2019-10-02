@@ -42,7 +42,9 @@ describe('calculator', function () {
 
   // - `calculator.numberClick()` - concatenate multiple number button clicks
   it('can concatenate multiple number button clicks', function(){
+    // calculator.runningTotal = 2;
     calculator.numberClick(2);
+    // calculator.numberClick(2);
     assert.deepStrictEqual(calculator.runningTotal, 2)
   })
 
