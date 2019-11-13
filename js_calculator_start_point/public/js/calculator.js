@@ -23,6 +23,7 @@ Calculator.prototype.divide = function(number){
 {this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);}
 }
 
+
 Calculator.prototype.numberClick = function(number){
 
   // when a number is clicked, if a previous operation has just been completed,
